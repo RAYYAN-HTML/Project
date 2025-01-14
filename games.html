@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Games</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="one">
+
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay"></div>
+
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+                </a>
+                <!-- Button to trigger the sidebar -->
+                <button class="navbar-toggler" type="button" id="sidebarToggleBtn" aria-label="Open sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div>
+                <div class="header-setting">
+                    <h5>Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="athlete.html">Athletes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-signin me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/signin.html">Sign In</a> </i> 
+                </button>
+                <button class="btn btn-signup me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i> 
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+
+    <hr class="hhr">
+    <h1 class="mainh1 text-center">GAMES</h1>
+    <hr class="hhr">
+
+
+    <div class="container">
+        <!-- <h1 class="text-center">Olympic Games</h1> -->
+        <p class="text-center gpo text-dark">
+            Explore the grandeur and history of the Olympic Games, featuring iconic sports, legendary athletes, and the host cities that brought the Olympics to life.
+        </p>
+        
+        <div class="games-section gp">
+            <h2>Summer Olympics</h2>
+            <p>The Summer Olympics are the largest international sports event, featuring disciplines like athletics, swimming, gymnastics, and basketball.</p>
+            <ul>
+                <li><strong>Popular Sports:</strong> Athletics, Swimming, Gymnastics, Basketball, Football</li>
+                <li><strong>First Edition:</strong> 1896 in Athens, Greece</li>
+                <li><strong>Frequency:</strong> Every 4 years</li>
+            </ul>
+        </div>
+
+        <div class="games-section gp">
+            <h2>Winter Olympics</h2>
+            <p>The Winter Olympics celebrate sports on ice and snow, featuring events like skiing, ice skating, and hockey.</p>
+            <ul>
+                <li><strong>Popular Sports:</strong> Skiing, Snowboarding, Ice Hockey, Figure Skating</li>
+                <li><strong>First Edition:</strong> 1924 in Chamonix, France</li>
+                <li><strong>Frequency:</strong> Every 4 years</li>
+            </ul>
+        </div>
+
+        <div class="games-section gp">
+            <h2>Past Olympic Games</h2>
+            <p>Here is a detailed list of some memorable Olympic Games and their host cities:</p>
+            <table class="games-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Host City</th>
+                        <th>Notable Highlights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1896</td>
+                        <td>Athens, Greece</td>
+                        <td>First modern Olympic Games</td>
+                    </tr>
+                    <tr>
+                        <td>1936</td>
+                        <td>Berlin, Germany</td>
+                        <td>Jesse Owens wins 4 gold medals</td>
+                    </tr>
+                    <tr>
+                        <td>1964</td>
+                        <td>Tokyo, Japan</td>
+                        <td>Introduction of Judo and Volleyball</td>
+                    </tr>
+                    <tr>
+                        <td>1980</td>
+                        <td>Moscow, USSR</td>
+                        <td>First Olympics held in Eastern Europe</td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>Beijing, China</td>
+                        <td>Record-breaking performance by Michael Phelps</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Tokyo, Japan</td>
+                        <td>Held amidst the COVID-19 pandemic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="games-section gp">
+            <h2>Future Olympic Games</h2>
+            <p>Here is a detailed list of upcoming Olympic Games and their host cities:</p>
+            <table class="games-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Host City</th>
+                        <th>Notable Highlights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Paris, France</td>
+                        <td>Return of the Summer Olympics to Paris after 100 years</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td>Milano-Cortina, Italy</td>
+                        <td>First Winter Olympics in Italy since 2006</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td>Los Angeles, USA</td>
+                        <td>Los Angeles hosts the Summer Olympics for the third time</td>
+                    </tr>
+                    <tr>
+                        <td>2032</td>
+                        <td>Brisbane, Australia</td>
+                        <td>First Olympics in Queensland, Australia</td>
+                    </tr>
+                    <tr>
+                        <td>2036</td>
+                        <td>TBD (To Be Decided)</td>
+                        <td>Potential return to Asia or Europe, still under consideration</td>
+                    </tr>
+                    <tr>
+                        <td>2040</td>
+                        <td>TBD (To Be Decided)</td>
+                        <td>Future host city to be determined</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+
+
+     <div id="footer" style="background-color: black;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        $("#footer").load("footer.html") ;
+    </script>
+</body>
+</html>

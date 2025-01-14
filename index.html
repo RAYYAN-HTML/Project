@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympics</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/fav.png">
+</head>
+
+<body>
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay"></div>
+
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+                </a>
+                <!-- Button to trigger the sidebar -->
+                <button class="navbar-toggler" type="button" id="sidebarToggleBtn" aria-label="Open sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div>
+                <div class="header-setting">
+                    <h5>Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="athlete.html">Athletes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-signin me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/signin.html">Sign In</a> </i> 
+                </button>
+                <button class="btn btn-signup me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i> 
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+    
+    <hr class="hhr">
+    <h1 class="mainh1 text-center">OLYMPICS</h1>
+    <hr class="hhr">
+
+        <div class="video-background">
+            <video autoplay muted loop id="bgVideo">
+                <source src="/img/Olympics.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+        <div class="main">
+            <!-- <h1>Explore More</h1> -->
+            <div class="container text-center my-5">
+                <h1 class="mb-4 count">Olympic Winter Games  Milano Cortina 2026</h1>
+                <div id="countdown-timer" class="d-flex justify-content-center align-items-center">
+                    <div class="timer-box mx-3">
+                        <span id="days" class="time">00</span>
+                        <p class="label">Days</p>
+                    </div>
+                    <div class="timer-box mx-3">
+                        <span id="hours" class="time">00</span>
+                        <p class="label">Hours</p>
+                    </div>
+                    <div class="timer-box mx-3">
+                        <span id="minutes" class="time">00</span>
+                        <p class="label">Minutes</p>
+                    </div>
+                    <div class="timer-box mx-3">
+                        <span id="seconds" class="time">00</span>
+                        <p class="label">Seconds</p>
+                    </div>
+                </div>
+            </div>
+            <a href="/signin.html">Join Now</a>
+        </div>
+
+        <!-- Features Section -->
+        <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Features</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide">
+                            <a href="aboutus.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/premium-vector/olympic-people-3d_267651-312.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="About Us">
+                                        <div class="overlay-text">
+                                            <h5>About Us</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="swiper-slide">
+                            <a href="games.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/free-vector/set-athletes_23-2147561028.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="Games">
+                                        <div class="overlay-text">
+                                            <h5>Games</h5>
+                                            <p>Explore our featured games and events.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="swiper-slide">
+                            <a href="athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/free-vector/chakras-mystical-concept_23-2148565945.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="Athletes">
+                                        <div class="overlay-text">
+                                            <h5>Athletes</h5>
+                                            <p>Meet the talented athletes breaking records.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="swiper-slide">
+                            <a href="contact.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/free-vector/flat-sport-competition-illustration_23-2148983986.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="Contact Us">
+                                        <div class="overlay-text">
+                                            <h5>Contact Us</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="swiper-slide">
+                            <a href="history.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/premium-photo/greyscale-shot-two-people-fighting-dressed-knights_181624-42435.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="History">
+                                        <div class="overlay-text">
+                                            <h5>History</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="swiper-slide">
+                            <a href="gallery.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/free-vector/new-normal-museums-concept_23-2148587936.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="Gallery">
+                                        <div class="overlay-text">
+                                            <h5>Gallery</h5>
+                                            <p>Explore our gallery of memorable moments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="swiper-slide">
+                            <a href="news.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.freepik.com/free-vector/people-showcasing-different-types-ways-access-news_53876-43017.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid"
+                                            alt="Stats">
+                                        <div class="overlay-text">
+                                            <h5>News</h5>
+                                            <p>Explore the latest News and figures from the Olympics.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- olympic banner -->
+        <section class="banner-olympics">
+            <div class="continer-fluid">
+                <img src="https://static.vecteezy.com/system/resources/previews/036/184/785/non_2x/olympics-ring-logo-isolated-on-white-background-summer-olympic-games-paris-2024-header-for-letters-websites-mailing-lists-olympic-games-banner-free-vector.jpg"
+                    alt="">
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="row align-items-center" id="banner-row">
+                <!-- Left Column: Image -->
+                <div class="col-md-6" id="container-banner-lamp">
+                    <img id="banner-lamp"
+                        src="https://img.olympics.com/images/image/private/t_hp_signup/f_auto/v1538355600/primary/lys8hqttmonkqqpo8dmb"
+                        alt="Banner">
+                </div>
+                <!-- Right Column: Text Content -->
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class="content" id="content-banner">
+                            <h1>Personalise your Olympic experience</h1>
+                            <p>
+                                Stay up to date on your favourite sports and athletes. Watch original Olympic films and
+                                documentaries.
+                                Get exclusive stories about your favourite Olympic athletes and sports into your e-mail
+                                inbox.
+                            </p>
+                            <div>
+                                <button class="btn ibtn" id="btn-signup-banner"><a href="login.html">LogIn</a></button>
+                                <button class="btn ibtn" id="btn-signup-banner"> <a href="signin.html">Sign In</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="py-5">
+            <div class="container-fluid">
+                <h2 class="text-center iath mb-4">Latest News</h2>
+                <div class="row">
+                    <div class="col-md-3 card-column-news ">
+                        <div class="card card-news">
+                            <a href="/news.html"> 
+                                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png"
+                                   class="card-img-top" alt="News">
+                                   <div class="card-body">
+                                       <h5 class="card-title">Breaking News</h5>
+                                       <p class="card-text">Stay updated with the latest happenings in sports.</p>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-column-news">
+                        <div class="card card-news">
+                            <a href="/news.html"> 
+                                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png"
+                                   class="card-img-top" alt="News">
+                                   <div class="card-body">
+                                       <h5 class="card-title">Upcoming Events</h5>
+                                       <p class="card-text">Don't miss the upcoming events and matches.</p>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-column-news">
+                        <div class="card card-news">
+                            <a href="/news.html"> 
+                                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png"
+                                   class="card-img-top" alt="News">
+                                   <div class="card-body">
+                                       <h5 class="card-title">Athlete Stories</h5>
+                                       <p class="card-text">Read inspiring stories of athletes worldwide.</p>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-column-news">
+                        <div class="card card-news">
+                             <a href="/news.html"> 
+                             <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png"
+                                class="card-img-top" alt="News">
+                            <div class="card-body">
+                                <h5 class="card-title">Athlete Stories</h5>
+                                <p class="card-text">Read inspiring stories of athletes worldwide.</p>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- athelete slider -->
+        <section id="athletes" class="bg-light py-5">
+            <div>
+        <div class="container">
+            <h2 class="text-center iath mb-4">Athletes</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide">
+                            <a href="/athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.olympics.com/images/image/private/t_1-1_600/f_auto/primary/hd31f5phuokbrypg6inp"
+                                            alt="About Us">
+                                        <div class="overlay-text">
+                                            <h5>NOAH LYLES</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="swiper-slide">
+                            <a href="/athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.olympics.com/images/image/private/t_1-1_600/f_auto/primary/evn0gkcvvi7mfildsznk"
+                                            alt="Games">
+                                        <div class="overlay-text">
+                                            <h5>NEERAJ CHOPRA</h5>
+                                            <p>Explore our featured games and events.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="swiper-slide">
+                            <a href="athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.olympics.com/images/image/private/t_1-1_600/f_auto/primary/v3r8wc1p361yb0yl8k0y"
+                                            alt="Athletes">
+                                        <div class="overlay-text">
+                                            <h5>ARSHAD NADEEM</h5>
+                                            <p>Meet the talented athletes breaking records.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="swiper-slide">
+                            <a href="/athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.olympics.com/images/image/private/t_1-1_600/f_auto/v1672757509/primary/n8oqmhtvrf9lc6hkszlj"
+                                            alt="Contact Us">
+                                        <div class="overlay-text">
+                                            <h5>LABRON JAMES</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="swiper-slide">
+                            <a href="/athlete.html">
+                                <div class="card full-card">
+                                    <div class="image-container">
+                                        <img src="https://img.olympics.com/images/image/private/t_1-1_600/f_auto/primary/bpg1hewhmku06znwbbnk"
+                                            alt="History">
+                                        <div class="overlay-text">
+                                            <h5>SIMONE BILES</h5>
+                                            <p>Learn more about our mission and values.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            </div>
+        </section>
+
+        <div class="item">
+            <div class="work-wrap d-md-flex">
+                <div class="img order-md-last"
+                    style="background-image: url('https://img.freepik.com/premium-photo/olympic-games-concept-colors-diversity-athletes_1028292-1422.jpg?ga=GA1.1.1469858987.1722484099&semt=ais_hybrid');">
+                </div>
+                <div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+                    <div class="desc w-100">
+                        <h2 class="mb-4">OUR HISTORY</h2>
+                        <p class="h5">Full History Of Olympics click visit to see the our challenges, 
+                        </p>
+                        <div class="row justify-content-end">
+                            <div class="col-xl-8">
+                                <p> <b>Ancient Olympics (776 BCE - 393 CE),</b> <br> The ancient Olympic Games were first held in Olympia, Greece, as a festival to honor Zeus,
+                                    the chief Greek god. The first recorded games took place in 776 BCE....... </p>
+                                    <hr class="bw">
+                            </div>
+                        </div>
+                        <div class="iha"><a href="/history.html">View More</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,  // Keeps autoplay running even if the user interacts
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    520: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    1: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                },
+            });
+        });
+        $(document).ready(function () {
+
+            $("#nav").load("nav.html");
+            $("#athletes_slide").load("athlete_slider.html")
+            $("#footer").load("footer.html");
+
+        });
+
+
+// Set the target date
+const targetDate = new Date("jan 6, 2026 00:00:00").getTime();
+
+// Update the countdown every second
+const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference < 0) {
+        clearInterval(interval);
+        document.getElementById("countdown-timer").innerHTML = "<h2>The event has started!</h2>";
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days.toString().padStart(2, "0");
+    document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+}, 1000);
+
+    </script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

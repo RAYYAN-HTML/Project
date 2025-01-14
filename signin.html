@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url(https://kutv.com/resources/media/8f3bac05-080a-462a-b10e-f00b0206723e-originalBlur_AP24137251839130.jpg);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 255, 0.267), rgba(255, 255, 0, 0.24), rgba(0, 0, 0, 0.267), rgba(0, 128, 0, 0.199), rgba(255, 0, 0, 0.26));
+            filter: blur(1px);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.452);
+            width: 500px;
+            height: 700px;
+            padding: 50px;
+            border-radius: 16px;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+            animation: border-gradient 5s infinite linear;
+            box-shadow: 0 0 20px rgba(105, 64, 62, 0.253), inset 0 0 40px rgba(0, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(165, 93, 93, 0.212), inset 0 0 50px rgba(0, 255, 255, 0.055);
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .input-box {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border-radius: 99px;
+            border: solid 3px transparent;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            caret-color: white;
+            transition: 0.25s;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        .input-box input:focus {
+            border: solid 3px rgba(255, 255, 255, 0.5);
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 20px;
+            transition: 0.25s;
+        }
+
+        .login-button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 20px;
+            background: linear-gradient(135deg, #32cdd588, #40dfe7cb, );
+            border: none;
+            border-radius: 99px;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #32cdd59d, 0 0 20px #40dfe7e3;
+        }
+
+        .dont-have-an-account {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+
+        .dont-have-an-account a {
+            color: #32CDD5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dont-have-an-account a:hover {
+            text-decoration: underline;
+            color: #000000;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Fy5JEFcjMC0IgGU9Z",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <form class="container" onsubmit="validateForm(event)">
+        <h1 class="login-title">Sign Up</h1>
+
+        <section class="input-box">
+            <input type="text" id="name" name="full-name" placeholder="Full Name" required>
+            <i class="bx bxs-user"></i>
+        </section>
+
+        <section class="input-box">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <i class="bx bxs-envelope"></i>
+        </section>
+
+        <section class="input-box">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <i class="bx bxs-user"></i>
+        </section>
+
+        <section class="input-box">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class="bx bxs-lock-alt"></i>
+        </section>
+
+        <section class="input-box">
+            <input type="password" id="c-password" name="confirm-password" placeholder="Confirm Password" required>
+            <i class="bx bxs-lock-alt"></i>
+        </section>
+
+        <button class="login-button" type="submit" onclick="sendMail()">Sign Up</button>
+
+        <h5 class="dont-have-an-account">Already have an account? <a href="login.html">Login</a></h5>
+    </form>
+    <script>
+
+        function validateForm(event) {
+            const form = event.target;
+            const fullName = form["full-name"];
+            const email = form["email"];
+            const username = form["username"];
+            const password = form["password"];
+            const confirmPassword = form["confirm-password"];
+
+            let isValid = true;
+
+
+            const namePattern = /^[A-Za-z\s]+$/;
+            if (!namePattern.test(fullName.value)) {
+                alert("Full Name must contain only letters and spaces.");
+                isValid = false;
+            }
+
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email.value)) {
+                alert("Please enter a valid email address.");
+                isValid = false;
+            }
+
+
+            if (username.value.length < 3) {
+                alert("Username must be at least 3 characters long.");
+                isValid = false;
+            }
+
+
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|~`-]).{8,}$/;
+            if (!passwordPattern.test(password.value)) {
+                alert("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                isValid = false;
+            }
+
+            // Validate Confirm Password
+            if (password.value !== confirmPassword.value) {
+                alert("Passwords do not match.");
+                isValid = false;
+            }
+
+            // Prevent form submission if validation fails
+            if (!isValid) {
+                event.preventDefault();
+            }
+        }
+
+        function sendMail() {
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+    const serviceID = "service_51o96e7";
+    const templateID = "template_3jr0yff";
+    
+    emailjs.send(serviceID,templateID,params)
+    .then(
+        res =>{
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Your Message Send Successfully");
+        }  
+    )
+    .catch((err) => console.log(err));
+}
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

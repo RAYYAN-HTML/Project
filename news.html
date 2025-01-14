@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay"></div>
+
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+                </a>
+                <!-- Button to trigger the sidebar -->
+                <button class="navbar-toggler" type="button" id="sidebarToggleBtn" aria-label="Open sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div>
+                <div class="header-setting">
+                    <h5>Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="athlete.html">Athletes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-signin me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/signin.html">Sign In</a> </i>
+                </button>
+                <button class="btn btn-signup me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i>
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+
+    <hr class="hhr">
+    <h1 class="mainh1 text-center">NEWS</h1>
+    <hr class="hhr">
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Article Section -->
+            <div class="article">
+                <h2>Breaking News Headline</h2>
+                <hr>
+                <div class="article-image">
+                    <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w1460/f_auto/primary/x1y1mcj43fb7seqrs7nm"
+                        alt="Breaking News Image" />
+                </div>
+
+                <p>
+                    For the third consecutive year, FC Barcelona and Real Madrid will clash in the Supercopa de Espana
+                    final, setting the stage for a high-stakes El Clasico at the King Abdullah SpCity stadium in
+                    Jeddah, Saudi Arabia on Sunday.
+
+                    Barcelona secured their spot in the Spanish Super Cup 2025 final with a 2-0 vicover Athletic
+                    Bilbao on Wednesday, while Real Madrid booked their place with a commanding 3-0against Mallorca
+                    on Thursday.
+
+                    The Real Madrid vs Barcelona Spanish Super Cup 2025 final will start at 12:3Indian Standard
+                    Time on Monday (January 13). The El Clasico match will be available on streaming in India.
+
+                    The Spanish Super Cup, officially known as the Supercopa de Espana, is an anfootball
+                    competition organised by the Royal Spanish Football Federation (RFEF). It servea curtain-raiser
+                    to the Spanish football season, featuring some of the top teams in the country.
+
+                </p>
+                <hr>
+                <p>
+
+                    Under the current format, four teams compete in the tournament, beginning with the semi-finals. The
+                    participating clubs are determined by La Liga champions, Copa del Rey winners, La Liga runners-up
+                    (if different from the Copa del Rey finalists) and Copa del Rey runners-up.
+
+                    Real Madrid are the reigning La Liga champions while Barcelona are runners-up. Athletic Bilbao
+                    emerged as the Cop del Rey winners last year after beating Mallorca in the final.
+
+                    The Supercopa is considered a prestigious title and provides an opportunity for clubs to win the
+                    season's first piece of silverware.
+
+                    Real Madrid currently lead the La Liga standings with 43 points from 19 games. Barcelona are third
+                    with 38 points from 19 matches.
+
+                    Barcelona are the most successful club in the history of the Spanish Super Cup, having claimed the
+                    title 14 times — one more than Real Madrid. Last year, Real lifted the trophy with a dominant 4-1
+                    victory, while Barcelona triumphed in the previous edition, defeating Real Madrid 3-1.
+                </p>
+                <!-- Related Olympic News Section -->
+                <div class="related-news">
+                    <h3>Related Olympic News</h3>
+                    <ul>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Olympic_Games">
+                                <div class="related-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxiuI-NGiNA6siAe1sJ6m43OkYLbLqozvUtQ&s"
+                                        alt="Olympic Games" />
+                                    <p>All About the Olympic Games</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Tokyo_2020_Olympics">
+                                <div class="related-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuvIxIphh29sugkqP9RXDXhrKUJv9n5fcsiQ&s"
+                                        alt="Tokyo 2020 Olympics" />
+                                    <p>Tokyo 2020 Highlights</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/List_of_Olympic_medalists">
+                                <div class="related-news-item">
+                                    <img src="https://www.sportco.io/images/post/wu_1626844917.jpg"
+                                        alt="Olympic Athletes" />
+                                    <p>Top Olympic Athletes</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/History_of_the_Olympic_Games">
+                                <div class="related-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4k-pGAqhZJAmW7y7m-g4-a8hl4kywJ-4AMg&s"
+                                        alt="Olympic History" />
+                                    <p>The History of the Olympics</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Sports_in_the_Olympic_Games">
+                                <div class="related-news-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThXomfsbcwpgvdIl3J4APEUnGmP0DMFTPCtQ&s"
+                                        alt="Olympic Sports" />
+                                    <p>Exploring Olympic Sports</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Sidebar Section -->
+            <div class="sidebar">
+                <h3>Trending News</h3>
+                <ul>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Olympic_Games">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-glu9uoTCk8NQwPQiMW6UvFpsEIp_NGYPg&s"
+                                alt="Olympic News" />
+                            Olympic News
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Tokyo_2020_Olympics">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFTNntWAN8UuMomYxtr1jQTn2Fft8ZgU7Rw&s"
+                                alt="Tokyo 2020 Updates" />
+                            Olympics Updates
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/history.html">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngjGLgFri9kB_Br-o_daa2aWo3zChY2UBeA&s"
+                                alt="Olympic Athletes' Stories" />
+                            Olympic Stories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/History_of_the_Olympic_Games">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtswU-pWDbaTgvFxk6jM84eltFz57hMQBVQw&s"
+                                alt="Olympic Events" />
+                            Olympic Events
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/List_of_sports_at_the_Summer_Olympics">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-_s5Wrld_gd50rs98BBHJpek-0Uyn0RKNQ&s"
+                                alt="New Olympic Sports" />
+                            New Olympic Sports
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Popular Topics</h3>
+                <ul>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Olympic_Games">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-WcW813Y0rTkVZX2UOxbw_GmNfcJoVMsAKQ&s"
+                                alt="Olympic Games" />
+                            Olympic Games
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Sports_in_the_Olympic_Games">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-_s5Wrld_gd50rs98BBHJpek-0Uyn0RKNQ&s"
+                                alt="New Olympic Sports" alt="Olympic Sports" />
+                            Olympic Sports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/athlete.html">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWa1DKHXK6O19pBi6F_bA5-hk_nCaOZM1E2g&s"
+                                alt="Olympic Athletes" />
+                            Olympic Athletes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/history.html">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6cwEVygfU9HfJwSaGeL2QGP7_o3fCBTY6Q&s"
+                                alt="Olympic History" />
+                            Olympic History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Tokyo_2020_Olympics">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG_FAnirMW_Mh4kIldQqH_GJ7IjD6assryig&s"
+                                alt="Tokyo 2020 Olympics" />
+                            Tokyo 2020 Olympics
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" style="background-color: black;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        $("#footer").load("footer.html");
+    </script>
+
+
+</body>
+
+</html>

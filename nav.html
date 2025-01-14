@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Custom Styles for Navbar */
+    #navbar123456 {
+      background-color: #cfcfcf;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    #navbar123456 .navbar-nav .nav-link {
+      color: #6c757d;
+      font-size: 14px;
+      margin: 0 10px;
+    }
+    #navbar123456 .navbar-nav .nav-link:hover {
+      color: #000;
+    }
+    #navbar123456 .btn-signin {
+      background-color: #e0f0ff;
+      color: #007bff;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+    #navbar123456 .btn-signin:hover {
+      background-color: #d4eaff;
+    }
+    #navbar123456 .dropdown-menu {
+      font-size: 14px;
+    }
+
+    .btn-signup {
+      display: none;
+    }
+
+    /* Adjust Logo */
+    #logo12345 img {
+      max-width: 100%;   
+      height: auto;      
+      max-height: 40px;  
+    }
+
+    /* Sidebar styles */
+    #sidebar_menu {
+      display: none;  
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: #f8f9fa;  
+      padding: 15px;
+      z-index: 1050;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #sidebar_menu.active {
+      display: block;  
+      transform: translateX(0);
+    }
+
+    #sidebar_menu:not(.active) {
+      transform: translateX(-100%);
+    }
+    #content {
+   transition: filter 0.3s ease;
+   }
+  
+   #content.blur {
+   filter: blur(30px);
+   pointer-events: none;
+   }
+
+    /* Overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1049; /* Ensure overlay is above the content */
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    #overlay:not(.active) {
+      opacity: 0;
+      filter: blur(30px);
+    }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+    @media (max-width: 991px) {
+      #navbar123456 {
+        display: none;
+      }
+    }
+        /* Sidebar Menu Styles */
+    #sidebar_menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #4aa1ffb6; 
+        color: #fff;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1050;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Show sidebar when active */
+    #sidebar_menu.active {
+       display: block;
+      transform: translateX(0);
+    }
+
+    /* Hide sidebar when not active */
+    #sidebar_menu:not(.active) {
+        transform: translateX(-100%);
+    }
+
+    /* Close button styling with yellow */
+    #sidebar_menu .btn-close-sidebar {
+        background: transparent;
+        border: none;
+        color: #f1c40f; /* Yellow color for the close button */
+        font-size: 24px;
+        position: absolute; /* Position absolute to control placement */
+        top: 15px; /* Distance from the top */
+        right: 15px; /* Distance from the right edge */
+        cursor: pointer;
+    }
+
+    #sidebar_menu .btn-close-sidebar:hover {
+        color: #f39c12; /* Darker yellow on hover */
+    }
+
+    /* Sidebar menu items styling */
+    #sidebar_menu .navbar-nav .nav-item {
+        margin-bottom: 15px;
+    }
+
+    /* Anchor (nav-link) styling */
+    #sidebar_menu .navbar-nav .nav-link {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px; /* Padding added to make the links more clickable */
+        display: block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 5px; /* Rounded corners for better visuals */
+    }
+
+    /* Hover effects with green background and smoother transition */
+    #sidebar_menu .navbar-nav .nav-link:hover {
+        color: #fff; /* Keep the text white */
+        background-color: #2ecc70a9; /* Green background on hover */
+    }
+
+    /* Menu header */
+    #sidebar_menu .header-setting {
+        border-bottom: 1px solid #1285ff;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    /* Menu header text */
+    #sidebar_menu .header-setting h5 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+  
+
+
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay"></div>
+        
+        <!-- Primary Navbar -->
+        <nav id="navbar123456" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <!-- <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+              </a> -->
+              
+              <!-- Sign Up Button -->
+              <button class="btn btn-signup">
+                  <i class="fa-solid fa-user"></i> Sign Up
+              </button>
+              
+              <!-- Navbar toggler for primary nav (collapse) -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent123456" aria-controls="navbarContent123456" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <!-- Primary Navbar content -->
+              <div class="collapse navbar-collapse" id="navbarContent123456">
+                <!-- Links -->
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item"><a class="nav-link" href="#">Paris 2024</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Milano Cortina 2026</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">LA 2028</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Brisbane 2032</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Museum</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Olympic Refuge Foundation</a></li>
+                </ul>
+          
+                <!-- Right-Aligned Buttons -->
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-signin me-2">
+                    <i class="fa-solid fa-user"></i> Sign In
+                  </button>
+          
+                  <!-- Language Dropdown -->
+                  <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      English
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li><a class="dropdown-item" href="#">Français</a></li>
+                      <li><a class="dropdown-item" href="#">Español</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+    
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+              </a>
+              <!-- Button to trigger the sidebar -->
+              <button class="navbar-toggler" type="button" id="sidebarToggleBtn" aria-label="Open sidebar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+        </nav>
+        
+      
+        <!-- Sidebar Menu -->
+
+        
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div class="sb-setting">
+                <div class="header-setting">
+                    <h5 class="text-dark">Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Paris 2024</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Milano Cortina 2026</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">LA 2028</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Brisbane 2032</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Museum</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Olympic Refuge Foundation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+            const sidebar = document.getElementById('sidebar_menu');
+            const content = document.getElementById('content');
+            const overlay = document.getElementById('overlay');
+
+            // Function to toggle sidebar and overlay
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+                content.classList.toggle('blur');
+                overlay.classList.toggle('active');
+            }
+
+            // Function to close sidebar and overlay
+            function closeSidebar() {
+              sidebar.classList.remove('active');
+              content.classList.remove('blur');
+              overlay.classList.remove('active');
+            }
+
+            // Sidebar toggle event listener
+            sidebarToggleBtn.addEventListener('click', toggleSidebar);
+
+            // Close sidebar on close button click
+            const closeBtn = document.querySelector('.toggle-sidebar');
+            closeBtn.addEventListener('click', closeSidebar);
+
+            // Close sidebar when clicking on the overlay
+            overlay.addEventListener('click', closeSidebar);
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

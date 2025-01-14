@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Fy5JEFcjMC0IgGU9Z",
+      });
+   })();
+</script>
+</head>
+<body class="about">
+    <div class="container contact-section">
+        <div class="row">
+            <!-- Form Section -->
+            <div class="col-md-6 col-sm-12">
+                <h2 class="contact cf">Contact Us</h2>
+                <form id="contactForm" novalidate>
+                    <div class="mb-3 con">
+                        <label for="name" class="form-label">Name :</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required pattern="^[a-zA-Z\s]+$" title="Please enter a valid name (letters and spaces only).">
+                        <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
+                    </div>
+                    <div class="mb-3 con">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3 con">
+                        <label for="message" class="form-label">Message :</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required ></textarea>
+                        <div class="invalid-feedback">Message must be between 10 and 500 characters.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary con-btn" onclick="sendMail()">Submit</button>
+                </form>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="col-md-6 col-sm-12 faq-section con-2">
+                <h2 class="cf">FAQs</h2>
+                <div class="accordion" id="faqAccordion con-2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1Header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                What is the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympics is an international multi-sport event held every four years.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                How can I participate in the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Athletes qualify through their respective sports' qualification criteria.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Where can I watch the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympics is broadcast on various television networks and streaming platforms.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                How do countries win medals?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Medals are awarded based on athletes' performances in their events.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                What are the Olympic rings?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympic rings represent the five continents and symbolize global unity.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq6Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                How often are the Olympics held?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6Header" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Summer and Winter Olympics are held every four years, alternating every two years.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            this.classList.add('was-validated');
+        });
+
+        function sendMail() {
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+    const serviceID = "service_51o96e7";
+    const templateID = "template_3jr0yff";
+    
+    emailjs.send(serviceID,templateID,params)
+    .then(
+        res =>{
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Your Message Send Successfully");
+        }  
+    )
+    .catch((err) => console.log(err));
+}
+    </script>
+</body>
+</html>
